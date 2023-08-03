@@ -6,7 +6,7 @@ body {
     background: url('/app/static/app/images/banner/b4.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
+    color: #ffffff;
     font-family: 'Lato';
 }
 
@@ -66,7 +66,7 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: url('/app/static/app/images/banner/b3.jpg');
+	background: url('/media/homepage_background_cropped.jpg');
 	z-index: -1;
 }
 
