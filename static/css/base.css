@@ -49,7 +49,7 @@ body {
 }
 
 .text-black {
-    color: #ac4040 !important;
+    color: #ffffff !important;
 }
 
 .border-black {
@@ -66,10 +66,14 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
+	background: url('/app/static/app/images/banner/b3.jpg');
 	z-index: -1;
 }
 
+.navbar-toggler-icon {
+   
+    background-color: white;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -91,5 +95,16 @@ body {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }
