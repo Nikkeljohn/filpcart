@@ -3,10 +3,10 @@ html {
 }
 
 body {
-    background: url('/app/static/app/images/banner/b4.jpg') no-repeat center center fixed;
+    background: url('/media/b4.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #ffffff;
+    color: #000000;
     font-family: 'Lato';
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .text-black {
-    color: #ffffff !important;
+    color: #000000 !important;
 }
 
 .border-black {
@@ -72,7 +72,7 @@ body {
 
 .navbar-toggler-icon {
    
-    background-color: white;
+    background-color: rgb(0, 0, 0);
 }
 /* -------------------------------- Media Queries */
 
