@@ -72,8 +72,59 @@ body {
 
 .navbar-toggler-icon {
    
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(148, 78, 78);
 }
+
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
+/* Mailchimp */
+#mc_embed_signup {
+    background: var(--dandy-black);
+    color: var(--dandy-white)
+    false;
+    clear: left;
+    width: 100%;
+    border-radius: 0;
+}
+
+#mc-embedded-subscribe {
+    color: var(--dandy-white) !important;
+    border: 2px solid var(--dandy-gold) !important;
+    background-color: var(--dandy-black) !important;
+    border-radius: 0 !important;
+}
+
+#mc-embedded-subscribe:hover {
+    border: 2px dashed var(--dandy-gold) !important;
+}
+
+#mc-embedded-subscribe:active {
+    border: 2px dashed var(--dandy-gold) !important;
+    background-color: var(--dandy-white) !important;
+    color: var(--dandy-black) !important;
+}
+
+#mce-EMAIL-HELPERTEXT {
+    color: var(--dandy-white) !important;
+    background-color: var(--dandy-black) !important;
+    border-radius: 0 !important;
+}
+
+#mce-EMAIL {
+    border-radius: 0;
+    border: 2px dashed var(--dandy-gold) !important;
+}
+
+#mce-EMAIL:not(:placeholder-shown) {
+    border-radius: 0;
+    border: 2px solid var(--dandy-gold) !important;
+    background-color: var(--dandy-black);
+    color: var(--dandy-white);
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
