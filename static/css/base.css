@@ -70,11 +70,6 @@ body {
 	z-index: -1;
 }
 
-.navbar-toggler-icon {
-   
-    background-color: rgb(148, 78, 78);
-}
-
 a.category-badge > span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
@@ -88,19 +83,13 @@ a.category-badge > span.badge:hover {
     right: 10px;
 }
 
-.btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
-}
-
 .btt-link,
 .update-link,
 .remove-item {
     cursor: pointer;
 }
 
-/*toasts*/
+/* ------------------------------- bootstrap toasts */
 
 .message-container {
     position: fixed;
@@ -115,57 +104,6 @@ a.category-badge > span.badge:hover {
 
 .toast-capper {
     height: 2px;
-}
-
-/* Mailchimp */
-#mc_embed_signup {
-    background: var(--dandy-black);
-    color: var(--dandy-white)
-    false;
-    clear: left;
-    width: 100%;
-    border-radius: 0;
-}
-#mc_embed_signup{
-    background:#fff; 
-    
-    clear:left; 
-    font:14px Helvetica,Arial,sans-serif; 
-    width: 600px;}
-
-#mc-embedded-subscribe {
-    color: rgb(255, 255, 255) !important;
-    border: 5px solid var(--dandy-gold) !important;
-    background-color: rgb(252, 0, 0) !important;
-    border-radius: 0 !important;
-}
-
-#mc-embedded-subscribe:hover {
-    border: 2px dashed var(--dandy-gold) !important;
-}
-
-#mc-embedded-subscribe:active {
-    border: 2px dashed var(--dandy-gold) !important;
-    background-color: var(--dandy-white) !important;
-    color: var(--dandy-black) !important;
-}
-
-#mce-EMAIL-HELPERTEXT {
-    color: var(--dandy-white) !important;
-    background-color: var(--dandy-black) !important;
-    border-radius: 0 !important;
-}
-
-#mce-EMAIL {
-    border-radius: 0;
-    border: 2px dashed var(--dandy-gold) !important;
-}
-
-#mce-EMAIL:not(:placeholder-shown) {
-    border-radius: 0;
-    border: 2px solid var(--dandy-gold) !important;
-    background-color: var(--dandy-black);
-    color: var(--dandy-white);
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
@@ -217,6 +155,57 @@ a.category-badge > span.badge:hover {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+/* Mailchimp */
+#mc_embed_signup {
+    background: var(--dandy-black);
+    color: var(--dandy-white)
+    false;
+    clear: left;
+    width: 100%;
+    border-radius: 0;
+}
+#mc_embed_signup{
+    background:#fff; 
+    
+    clear:left; 
+    font:14px Helvetica,Arial,sans-serif; 
+    width: 600px;}
+
+#mc-embedded-subscribe {
+    color: rgb(255, 255, 255) !important;
+    border: 5px solid var(--dandy-gold) !important;
+    background-color: rgb(252, 0, 0) !important;
+    border-radius: 0 !important;
+}
+
+#mc-embedded-subscribe:hover {
+    border: 2px dashed var(--dandy-gold) !important;
+}
+
+#mc-embedded-subscribe:active {
+    border: 2px dashed var(--dandy-gold) !important;
+    background-color: var(--dandy-white) !important;
+    color: var(--dandy-black) !important;
+}
+
+#mce-EMAIL-HELPERTEXT {
+    color: var(--dandy-white) !important;
+    background-color: var(--dandy-black) !important;
+    border-radius: 0 !important;
+}
+
+#mce-EMAIL {
+    border-radius: 0;
+    border: 2px dashed var(--dandy-gold) !important;
+}
+
+#mce-EMAIL:not(:placeholder-shown) {
+    border-radius: 0;
+    border: 2px solid var(--dandy-gold) !important;
+    background-color: var(--dandy-black);
+    color: var(--dandy-white);
 }
 
 
