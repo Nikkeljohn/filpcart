@@ -3,10 +3,10 @@ html {
 }
 
 body {
-    background: url('/media/b4.jpg') no-repeat center center fixed;
+    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #000000;
+    color: #555;
     font-family: 'Lato';
 }
 
@@ -38,18 +38,31 @@ body {
     color: white;
 }
 
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #fa9494;
+    background: #222;
     color: white;
 }
 
 .text-black {
-    color: #000000 !important;
+    color: #000 !important;
 }
 
 .border-black {
@@ -66,7 +79,7 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: url('/media/sirisvisual-Qh6yUFl7P5E-unsplash.jpg');
+	background: white;
 	z-index: -1;
 }
 
@@ -156,6 +169,20 @@ a.category-badge > span.badge:hover {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+/* -------------------------------- Media Queries */
+
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: url('/media/sirisvisual-Qh6yUFl7P5E-unsplash.jpg');
+	z-index: -1;
+}
+
 
 /* Mailchimp */
 #mc_embed_signup {
