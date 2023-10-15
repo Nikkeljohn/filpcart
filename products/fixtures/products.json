@@ -16,11 +16,11 @@
       "fields":{
           "category": 1,
           "sku": "pp5001600425",
-          "name": "Epiphone Sheraton-II Pro VS",
-          "description": "As with any good semi-acoustic, the Sheraton also has a bit of a woody resonance in the sound. This is particularly noticeable with more intricate and delicate playing styles in the clean and low crunch range, due to its rich frequency spectrum and great dynamics.\n\nJazz Collection Thinline with f-holes\nBody & Top: Maple\nNeck: Maple\nFretboard: Pau Ferro\nFretboard inlays: Triangle\nPickups: 2 Probucker humbuckers with coil splitting\nHardware: Gold-plated\nColour: Vintage Sunburst\nCorresponding case: Article Nr 129712 or Article Nr 414324 (both are not included, must be ordered separately)",
-          "price": 659.00,
-          "image_url": "https://images.static-thomann.de/pics/bdb/_15/155028/8592047_800.jpg",
-          "image": "8592047_800.jpg"
+          "name": "parlside",
+          "description": " a residential unit that is part of one (or several) residential buildings, or a separate dwelling within a house with its own entrance, 3 bed, 2 bathroom and kitchen.",
+          "price": 459000.00,
+          "image_url": "https://workspace/filpcart/images/apartment3.png",
+          "image": "apartment3.png"
       }
     },
     {
@@ -28,11 +28,11 @@
       "fields":{
           "category": 1,
           "sku": "pp5001730010",
-          "name": "B.B. King Lucille",
-          "description": "Based on the famously named guitars of blues legend B.B. King, the Epiphone B.B. King Lucille was inspired by the various Gibson ES™ models he played over the years - all of which were named Lucille. Standout features that make this Lucille such a stunning guitar and loving tribute include gold hardware, Grover® Rotomatic® tuners, a Graph Tech® nut, ebony fretboard with pearloid block inlays, a brass truss rod cover with B.B. King’s name engraved on it, mother of pearl Lucille inlay on the headstock face, multi-ply binding on the body and headstock, a TP-6 tailpiece with fine tuners, and a semi-hollow body with a maple center block to reduce feedback. Unlike most semi-hollowbody guitars, the B.B. King Lucille’s top doesn’t have any f-holes",
-          "price": 1099.00,
-          "image_url": "https://images.ctfassets.net/m8onsx4mm13s/2b3iRspYsPKWDNgC5DRgBU/e769f9795f884ec50be07b81984c553d/__static.gibson.com_product-images_Epiphone_EPIYX7224_Ebony_IGBBKEBGH3_front.jpg",
-          "image": "__static.gibson.com_product-images_Epiphone_EPIYX7224_Ebony_IGBBKEBGH3_front.jpg"
+          "name": "Cedarwood",
+          "description": "a residential unit that is part of one (or several) residential buildings, or a separate dwelling within a house with its own entrance, 4 bed, 3 bathroom and kitchen.",
+          "price": 599099.00,
+          "image_url": "https://workspace/filpcart/images/apartment2.png",
+          "image": "/workspace/filpcart/images/apartment2.png"
       }
     },
     {
