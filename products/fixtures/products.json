@@ -2,13 +2,13 @@
     {
       "model": "products.product",
       "fields":{
-          "category": 1,
+          "category": 4,
           "sku": "pp5001340155",
-          "name": "Ibanez AS93FM-TCD",
-          "description": "Artcore series\nBody: Flamed maple\nThree-piece set neck: Nyatoh/maple\n22 Medium frets\nFretboard: Ebony\nWhite block fretboard inlays\nPickups: 2 Super 58 humbuckers\nART-1 bridge with Quik-Change III tailpiece\nGolden hardware\nColour: Transparent Cherry Red",
-          "price": 722.00,
-          "image_url": "https://images.static-thomann.de/pics/bdb/_42/428995/12984994_800.jpg",
-          "image": "12984994_800.jpg"
+          "name": "Temple gardens 70",
+          "description": " a residential unit that is part of one (or several) residential buildings, or a separate dwelling within a house with its own entrance, bathroom and kitchen.",
+          "price": 450000.00,
+          "image_url": "https:///workspace/filpcart/images/apartment.png",
+          "image": "apartment.png"
       }
     },
     {
