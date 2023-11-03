@@ -1,13 +1,13 @@
-# filpcart
+# MyHouse
 
 
-Developer: <a href='https://www.linkedin.com/in/omurilolima/' target='_blank'>Murilo Lima</a>
+Developer: <a href='' target='_blank'>Nikkel John</a>
 
-Visit the [live site](https://murilo-guitar-shop-dee69b8139e5.herokuapp.com/)
+Visit the [live site](.herokuapp.com/)
 
 This is my final project for the Full-Stack Software Development Course at Code Institute / University College Dublin
 
-![screenshot](documentation/the-guitar-store.png)
+![screenshot](/images/Screenshot%202023-10-29%20at%2009.36.49.png)
 
 ## Table of Contents
 
@@ -67,7 +67,7 @@ This is my final project for the Full-Stack Software Development Course at Code 
 
 ## Introdution
 
-The Guitar Store is a comprehensive Django website specialized created for an Irish local store sell guitars online. There, users can search for products, buy them securely using Stripe Payments,  create a profile to leave product reviews, besides to keep an Order History. Also, the site a newsletter sign up and a blog section where users  can find content about Music and Instruments and interact adding a comment or liking a post.
+The MyHome Store is a comprehensive Django website specialized created for an Irish local store sell Houses and household items online. There, users can search for products, buy them securely using Stripe Payments,  create a profile to leave product reviews, besides to keep an Order History. Also, the site a newsletter sign up and a blog section where users  can find content about house  and interact adding a comment or liking a post.
 
 ### Business goals addressed with this site
 - Build brand awareness;
@@ -84,14 +84,14 @@ discount cupoms.
 
 ### Ideal client
 - English speaking;
-- Has interest about guitar;
-- Want to buy a new instrument.
+- Has interest about sell or buy houses;
+- Want to buy a household items.
 
 Back to [top](#table-of-contents)
 
 ## UX
 
-Thinking about the design was really simple. The guitars are the beauty. So I kept as simple and clean as possible.
+Thinking about the design was really simple, So I kept as simple and clean as possible.
 
 The site flow is pretty basic, but efficient. The users can add items to their shopping bag and see the running total as they browse the site. This is a essential function to easy the buying process.
 
@@ -112,8 +112,8 @@ Example:
 
 ### Images and Post Content
 
-All the guitar images on the site were gathered on [Thomann](https://thomann.de/ie/) website.
-The blog posts were oginaly published by [Guitar Player](https://www.guitarplayer.com/) magazine.
+All the house images on the site were gathered on [Freepik](hhttps://www.freepik.com/free-photos-vectors/indian-house/80) website.
+The blog posts were oginaly published by []() magazine.
 
 ### Wireframes
 
@@ -121,9 +121,9 @@ I've used [Figma](https://www.figma.com/) to design my site wireframes.
 
 | Page | Wireframe |
 | --- | --- |
-| Home | ![screenshot](documentation/home-wireframe.png) |
-| All products | ![screenshot](documentation/all-products-wireframe.png) |
-| Product detail | ![screenshot](documentation/product-detail-wireframe.png) |
+| Home | ![screenshot]() |
+| All products | ![screenshot]() |
+| Product detail | ![screenshot]() |
 
 Back to [top](#table-of-contents)
 
@@ -228,7 +228,7 @@ Back to [top](#table-of-contents)
 | Feature | Description | Image |
 | --- | --- | --- |
 | Hero image | Presents a big image with a call to action for all products page. | ![screenshot](documentation/hero.png) |
-| Footer | Divided in three section, presents a description of the Guitar Store wich could be used to displays the physical address. A newsletter subscrition form and the social links | ![screenshot](documentation/footer.png) |
+| Footer | Divided in three section, presents a description of the MyHouse wich could be used to displays the physical address. A newsletter subscrition form and the social links | ![screenshot](documentation/footer.png) |
 | Search Bar | To find specific products, users can utilize the search bar in the navigation menu. The search term is compared to product names and descriptions to provide a list of products that match the user's search criteria. | ![screenshot](documentation/search.png)
 | Filter by Price or Category | Through the topbar is possible to display the products ordered by price or category | ![screenshot](documentation/by-price-categofy.png) |
 | All Products | This page displays all the available products | ![screenshot](documentation/all-products.png) |
@@ -264,7 +264,7 @@ Before starting code and create models, I built a Relationship Diagrams (ERD) wi
 ![database-driagram](documentation/Guitar%20Store%20-%20Database%20ER%20diagram.png) 
 
 ### Models
-The following models were created for Guitar Store.
+The following models were created for MyHouse.
 
 - Category
 ```python
@@ -463,7 +463,7 @@ Back to [top](#table-of-contents)
 
 ## Ecommerce Business Model
 
-The Guitar Store is dedicated to selling products to individual customers through a simple Business to Customer model (B2B). The site is still in its early stages; however, it already offers a newsletter and social media marketing links to promote the business. By leveraging social media platforms like Facebook, we can build a community of users around the site, leading to an increase in visitor numbers and consequently more purchases.
+The MyHouse is dedicated to selling products to individual customers through a simple Business to Customer model (B2B). The site is still in its early stages; however, it already offers a newsletter and social media marketing links to promote the business. By leveraging social media platforms like Facebook, we can build a community of users around the site, leading to an increase in visitor numbers and consequently more purchases.
 
 The newsletter is an effective tool for us to communicate regular updates to our users. It is an excellent way to share information about special offers, new product updates, changes in business hours, notifications of events, and more. Our goal is to ensure that our users are always up-to-date and informed.
 

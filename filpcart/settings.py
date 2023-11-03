@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'payment',
     'profiles',
 
+
      # Other
     'crispy_forms',
 

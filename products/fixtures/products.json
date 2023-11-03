@@ -14,9 +14,9 @@
     {
       "model": "products.product",
       "fields":{
-          "category": 1,
+          "category": 4,
           "sku": "pp5001600425",
-          "name": "parlside",
+          "name": "parkside",
           "description": " a residential unit that is part of one (or several) residential buildings, or a separate dwelling within a house with its own entrance, 3 bed, 2 bathroom and kitchen.",
           "price": 459000.00,
           "image_url": "https://workspace/filpcart/images/apartment3.png",
@@ -26,11 +26,11 @@
     {
       "model": "products.product",
       "fields":{
-          "category": 1,
+          "category": 4,
           "sku": "pp5001730010",
           "name": "Cedarwood",
           "description": "a residential unit that is part of one (or several) residential buildings, or a separate dwelling within a house with its own entrance, 4 bed, 3 bathroom and kitchen.",
-          "price": 599099.00,
+          "price": 599090.00,
           "image_url": "https://workspace/filpcart/images/apartment2.png",
           "image": "/workspace/filpcart/images/apartment2.png"
       }
@@ -40,8 +40,8 @@
       "fields":{
           "category": 1,
           "sku": "pp5001890157",
-          "name": "Gibson 1961 ES-335 Reissue Ebony HA",
-          "description": "Custom shop model\nBody: Maple / Poplar / Maple\nNeck: Mahogany\nFingerboard: Rosewood\nDot fingerboard inlays\nNeck Profile: Authentic '61 Skinny C\nScale: 628 mm\nRoyalite Binding\nHolly Head Veneer\n22 Frets\nPickups: 2 Custombucker AlNiCo III unpotted humbuckers\n2 x Volume and 2 x tone controls",
+          "name": "Newtown",
+          "description": "",
           "price": 7999.00,
           "image_url": "https://images.static-thomann.de/pics/bdb/_52/521099/17599243_800.jpg",
           "image": "17599243_800.jpg"
