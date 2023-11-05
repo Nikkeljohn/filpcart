@@ -1,0 +1,1 @@
+web: gunicorn filpcart.wsgi:application
