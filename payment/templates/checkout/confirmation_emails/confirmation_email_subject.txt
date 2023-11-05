@@ -1,2 +1,2 @@
 
-FlipKart Confirmation for Order Number {{ order.order_number }}
+MyHomeConfirmation for Order Number {{ order.order_number }}
