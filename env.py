@@ -1,3 +1,5 @@
 import os
-os.environ["SECRET_KEY"]="09x7e$nl46!tyjd1@4g6ps&r01evztgom9ge549sy0&kpnl3)x"
+os.environ["SECRET_KEY"]="!oq_f2)al5)-7wz-pqil)%k#jlvj4wp3x*z2^3$bflu@6(3=d@"
 os.environ["STRIPE_PUBLIC_KEY"]
+os.environ["DEBUG"] = 'True'
+os.environ["DEVELOPMENT"] = 'True'
