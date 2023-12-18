@@ -1,13 +1,13 @@
 # MyHouse
 
 
-Developer: <a href='' target='_blank'>Nikkel John</a>
+Developer: <a href='https://github.com/Nikkeljohn' target='_blank'>Nikkel John</a>
 
-Visit the [live site](.herokuapp.com/)
+Visit the [live site]()
 
 This is my final project for the Full-Stack Software Development Course at Code Institute / University College Dublin
 
-![screenshot](/images/Screenshot%202023-10-29%20at%2009.36.49.png)
+![screenshot](/images/home.png)
 
 ## Table of Contents
 
@@ -49,7 +49,7 @@ This is my final project for the Full-Stack Software Development Course at Code 
     - [Automatic Testing](#automatic-testing)
 - [Configuration and Deployment](#configuration)
     - [ElephantSQL Database](#elephantsql-database)
-    - [Amazon AWS](#amazon-aws)
+    - [coludaniary AWS](#amazon-aws)
     - [Stripe API](#stripe-api)
     - [Gmail API](#gmail-api)
     - [Heroku Deployment](#heroku-deployment)
@@ -101,14 +101,13 @@ I've included an footer with a signup form where users can receive exclusive off
 
 I used [coolors.co](https://coolors.co/) to generate my colour palette.
 
-![colors](documentation/colour-scheme.png)
+
 
 ### Typography
 
 I used Google Fonts to select and import the font Poppins, including for main headers and the logo because it is modern but easily readable at the same time. [Lato](https://fonts.google.com/specimen/Lato) was used for all the text.
 
-Example:
-![font](documentation/lato-google-font.png)
+
 
 ### Images and Post Content
 
@@ -623,13 +622,9 @@ CSS file validation results generated with W3C Validation Service
 
 | Test Label | Test Action | Expected Outcome | Test Outcome |
 | --- | --- | --- | --- |
-| Site loading | Navigate to the “Homepage”, “Login”, “Register”, “Add a product”, “Logout” and “All Products”, "Blog", "Blog Post" page. | All the pages and elements are loaded according. | PASS  |
+| Site loading | Navigate to the “Homepage”, “Login”, “Register”, “Add a product”, “Logout” and “All Products”. | All the pages and elements are loaded according. | PASS  |
 | Add a product in the bag | On the product detail page, click the "Add to bag" button”. | The product is added to the bag and can be found in the bag page. | PASS |
 | Checkout | On the checkout page, fill the form with user details, delivery details and the Stripe Test Credit info. | The checkout in done, a order confirmation page is displayed and a email confirmation is sent. | PASS |
-| Read a blog post | On the blog homepage, click on one of the cards presented in the “blog posts” section. | All the elements of post_detail are loaded according. | PASS |
-| Leave a comment without logging | On the “post page”, without having logged in, go to the comment section. | A message informing that “To see the comments and leave a comment, please log in or create an account.” must be presented followed by the buttons “login” and “register”. | PASS |
-| Leave a comment being logged in. | On the “post page”, having logged in, go to the comment section. Write some text and hit the “submit” button. | A message informing that “Your comment is awaiting approval” must be displayed. | PASS  |
-| Like a post | On the “post page”, click on the heart icon. | The counter of likes must increase by 1. | PASS  |
 | Add a product | On the navbar, click the “Product Management” option, fill out the form and hit the “Submit” button. | A success message must be displayed and the product must be listed on the “All Products” page. | PASS |
 | Edit a product | On the products page, click the “Edit” button, change some info on the form and hit the “Submit” button. | A success message must be displayed and the product info must be updated. | PASS |
 | Delete a Product | On the products page, click the “Delete”. | The product must be deleted. | PASS |
@@ -666,7 +661,7 @@ I used Chrome developer tool to check the responsiveness on different screen siz
 
 Django testing tools have been used to perform basic automatic testing on Guitar Store Python code for validating the main logical thing. Tests were run using the local SQLite3 database as opposed to the production PostgreSQL database. Those tests achieve 70% coverage.
 
-Test scripts were written for all models.py, forms.py and views.py of the project apps (bag, blog, checkout, guitar store, home, products and profiles);
+Test scripts were written for all models.py, forms.py and views.py of the project apps (bag,checkout, , home, products and profiles);
 
 models.py
 views.py

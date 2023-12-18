@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG") == "True"
 
-ALLOWED_HOSTS = ['https://git.heroku.com/myhome-1.git','localhost']
+ALLOWED_HOSTS = ['https://git.heroku.com/myhome-1.git','localhost','8000-nikkeljohn-filpcart-6kust116qr1.ws-eu107.gitpod.io']
 
 
 # Application definition
@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'bag',
     'payment',
     'profiles',
+    'cloudinary_storage',
+    'cloudinary',
     
 
 
@@ -170,6 +172,12 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+#cloudinary.config(
+    #cloud_name=os.environ.get("CLOUDINARY_CLOUD_NAME"),
+    #api_key=os.environ.get("CLOUDINARY_API_KEY"),
+    #api_secret=os.environ.get("CLOUDINARY_API_SECRET"),
+#)
 
 
 # Static files (CSS, JavaScript, Images)
