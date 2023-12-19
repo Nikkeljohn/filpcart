@@ -3,7 +3,7 @@
 
 Developer: <a href='https://github.com/Nikkeljohn' target='_blank'>Nikkel John</a>
 
-Visit the [live site]()
+Visit the [live site](https://myhome-1-30d4043086e4.herokuapp.com/)
 
 This is my final project for the Full-Stack Software Development Course at Code Institute / University College Dublin
 
@@ -120,9 +120,9 @@ I've used [Figma](https://www.figma.com/) to design my site wireframes.
 
 | Page | Wireframe |
 | --- | --- |
-| Home | ![screenshot]() |
-| All products | ![screenshot]() |
-| Product detail | ![screenshot]() |
+| Home | ![screenshot](/images/home.png) |
+| Bag | ![screenshot](/images/bag.png) |
+| profile detail | ![screenshot](/images/myprofile.png) |
 
 Back to [top](#table-of-contents)
 
@@ -141,13 +141,13 @@ Back to [top](#table-of-contents)
 
 For this project, GitHub Projects was utilized as an Agile tool. While it's not a specialized tool, it can be customized with the appropriate tags and project creation/issue assignments to make it effective. User stories, issues, and milestone tasks were planned using it, then tracked on a weekly basis using the basic Kanban board.
 
-![kanban-board](documentation/kanban-board.png) 
+![kanban-board] 
 
 ### GitHub Issues
 
 GitHub Issues served as an another Agile tool for manage the issues throughout the development process.
 
-![github-issues](documentation/github-issues.png) 
+![github-issues] 
 
 ### MoSCoW Prioritization
 
@@ -162,7 +162,7 @@ For prioritization, I used the MoSCow framework, adding labels to my tasks and u
 
 In order to enhance the efficiency of this project's development process, I mapped out 34 tasks through 29 user stories to build the website to a good standard. In addition, I splited these user stories into epics in order to take an agile approach towards their development.
 
-View a full list of user stories [here](https://github.com/users/omurilolima/projects/4/views/1?layout=table&visibleFields=%5B%22Title%22%2C%22Status%22%2C%22Labels%22%2C%22Milestone%22%5D).
+View a full list of user stories [here](https://github.com/users/Nikkeljohn/projects/11).
 
 ### EPIC 1: General Site Functionality
 
@@ -194,19 +194,15 @@ View a full list of user stories [here](https://github.com/users/omurilolima/pro
 - As a site user I want to create an account on the site so that I can see a history of my purchases on my account and save my billing and shipping details. `(MUST HAVE)`
 - As a registered user I want to edit my account details so that I can keep them up to date. `(SHOULD HAVE)`
 
-### EPIC 5: Blog
 
-- As a Site Admin, I want to create, read, update and delete blog posts so that I can manage my blog content. `(COULD HAVE)`
-- As a User, I want to leave a comment to engage with the author and other readers. `(COULD HAVE)`
-- As a User, I want to like a blog post. `(COULD HAVE)`
 
-### EPIC 6: Site Admin
+### EPIC 5: Site Admin
 
 - As a site admin I want to add new products from the front end so that I can easily manage the catalogue to the site. `(SHOULD HAVE)`
 - As a site admin I want to edit existing products so that I can ensure that all product details are up to date. `(SHOULD HAVE)`
 - As a site admin I want to delete products from the site so that I can remove any products that are no longer being on the catalogue. `(SHOULD HAVE)`
 
-### EPIC 7: SEO & Marketing
+### EPIC 6: SEO & Marketing
 
 - As a site admin I want to set appropriate meta tags on the site to enhance the chances of potential customers discovering my store via Google searches. `(MUST HAVE)`
 - As a site user I want to sign up for the site's mailing list to receive offers and news. `(SHOULD HAVE)`
@@ -226,24 +222,24 @@ Back to [top](#table-of-contents)
 ### Existing Features
 | Feature | Description | Image |
 | --- | --- | --- |
-| Hero image | Presents a big image with a call to action for all products page. | ![screenshot](documentation/hero.png) |
-| Footer | Divided in three section, presents a description of the MyHouse wich could be used to displays the physical address. A newsletter subscrition form and the social links | ![screenshot](documentation/footer.png) |
-| Search Bar | To find specific products, users can utilize the search bar in the navigation menu. The search term is compared to product names and descriptions to provide a list of products that match the user's search criteria. | ![screenshot](documentation/search.png)
-| Filter by Price or Category | Through the topbar is possible to display the products ordered by price or category | ![screenshot](documentation/by-price-categofy.png) |
-| All Products | This page displays all the available products | ![screenshot](documentation/all-products.png) |
-| Product card | With a good image of the product, this card displays the name, category and price for a regular user. For the admin, there are two special links for editing or deleting the product. | ![screenshot](documentation/product-card.png) |
-| Product | This page displays all the detailed informations about the products, besides the 'Add to Bag' buttom and a Reviews section where any logged user can leave a review. | ![screenshot](documentation/product-page.png) |
-| Bag pop up | When the user add a product to the bag, this pop-up informs that the product was added with success to the bag, besides a summary of the bag and a yellow message about the free delivery offer | ![screenshot](documentation/bag-pop-up.png) |
-| Shopping Bag Page | This page informs the items in the bag page for the user to double chech before the checkout. | ![screenshot](documentation/shopping-bag.png) |
-| Checkout Page | This page has the user fill in the delivery details and credit card info. For logged users, the name, email and delivery information can be saved to be pre-fill in the purchase. | ![screenshot](documentation/checkout-page.png)
-| Order Confirmation Page | Once the order is done, the user will be directed to a confirmation page that informs them that an email containing the order confirmation has been sent to their provided email address. | ![screenshot](documentation/order-confirmation-page.png)
-| Profile page | This page stores the user's default delivery information and the order history. Each order number has a link to its order confirmation page | ![screenshot](documentation/profile-page.png)|
-| Profile Page | This page stores the user's default delivery information and the order history. Each order number has a link to its order confirmation page | ![screenshot](documentation/profile-page.png)|
-| Error Page | If the user ends up in a broken link or a page the doesn't exist, a error page is displayed informing that the page they are looking for isn't available. | ![screenshot](documentation/error-page.png) |
-| Add Product | As an admin user, there is the possibility of add a new product to the site from the My Account >>> Product Management dropdown menu in the navbar | ![screenshot](documentation/add-product.png) |
-| Review Product | As a logged user, you can leave a product review and help other users who are interested in that produc too. | ![screenshot](documentation/product-review.png) |
-| Blog page | Displays a list of articles about music and products that are sold on the site. | ![screenshot](documentation/blog.png) |
-| Blog post | Displays an article and the comment setion. | ![screenshot](documentation/blog-post.png) |
+| Hero image | Presents a big image with a call to action for all products page. | |
+| Footer | Divided in three section, presents a description of the MyHouse wich could be used to displays the physical address. A newsletter subscrition form and the social links |  |
+| Search Bar | To find specific products, users can utilize the search bar in the navigation menu. The search term is compared to product names and descriptions to provide a list of products that match the user's search criteria. | 
+| Filter by Price or Category | Through the topbar is possible to display the products ordered by price or category |  |
+| All Products | This page displays all the available products |  |
+| Product card | With a good image of the product, this card displays the name, category and price for a regular user. For the admin, there are two special links for editing or deleting the product. |  |
+| Product | This page displays all the detailed informations about the products, besides the 'Add to Bag' buttom and a Reviews section where any logged user can leave a review. | !g) |
+| Bag pop up | When the user add a product to the bag, this pop-up informs that the product was added with success to the bag, besides a summary of the bag and a yellow message about the free delivery offer |  |
+| Shopping Bag Page | This page informs the items in the bag page for the user to double chech before the checkout. |  |
+| Checkout Page | This page has the user fill in the delivery details and credit card info. For logged users, the name, email and delivery information can be saved to be pre-fill in the purchase. | 
+| Order Confirmation Page | Once the order is done, the user will be directed to a confirmation page that informs them that an email containing the order confirmation has been sent to their provided email address. | 
+| Profile page | This page stores the user's default delivery information and the order history. Each order number has a link to its order confirmation page | |
+| Profile Page | This page stores the user's default delivery information and the order history. Each order number has a link to its order confirmation page | |
+| Error Page | If the user ends up in a broken link or a page the doesn't exist, a error page is displayed informing that the page they are looking for isn't available. | |
+| Add Product | As an admin user, there is the possibility of add a new product to the site from the My Account >>> Product Management dropdown menu in the navbar |  |
+| Review Product | As a logged user, you can leave a product review and help other users who are interested in that produc too. |  |
+| Blog page | Displays a list of articles about music and products that are sold on the site. |  |
+| Blog post | Displays an article and the comment setion. |  |
 
 
 ### Features to Implement in Future
@@ -260,7 +256,7 @@ Back to [top](#table-of-contents)
 
 Before starting code and create models, I built a Relationship Diagrams (ERD) with [Lucidchard](https://lucid.app/) to better visualize the database architecture.
 
-![database-driagram](documentation/Guitar%20Store%20-%20Database%20ER%20diagram.png) 
+![database-driagram](/images/database.png) 
 
 ### Models
 The following models were created for MyHouse.
@@ -468,26 +464,8 @@ The newsletter is an effective tool for us to communicate regular updates to our
 
 Back to [top](#table-of-contents)
 
-## Search Engine Optimization (SEO) & Social Media Marketing
 
-### Description and Keywords
 
-The following description and kewwords were used as meta tags for improve the score of the site in search engines:
-- Description:
-```
-<meta name="description" content="Find your new Instrument at Guitar Store, in Dublin, Ireland">
-```
-- Keywords:
-```
-<meta name="keywords" 
-	content="Guitar, Store, Shop, Instrument, Dublin, Ireland, Les Paul, Strat,
-	Telecaster, Semihollow, Fender, Gibson, Epiphone, Ibanez">
-```
-
-### Sitemap
-
-I used [XML-Sitemaps](https://www.xml-sitemaps.com) to generate a sitemap.xml file.
-This is the file generated using my deployed site URL: [sitemap](https://github.com/omurilolima/guitar-store/blob/cc4c8fff5492ac1db263f1607fe81a0ccb2ebf14/sitemap.xml)
 
 ### Robots
 
@@ -527,13 +505,13 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 <details>
 <summary><strong>base.html</strong> </summary>
 
-![base.html](/documentation/code/base.png)
+![base.html]()
 </details>
 
 <details>
 <summary> <strong>add-product.html</strong></summary>
 
-![add_product.html](/documentation/code/add_product.png)
+![add_product.html]()
 
 </details>
 
@@ -549,21 +527,21 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 <details>
 <summary> <strong>checkout_success.html</strong></summary>
 
-![checkout_success.html](/documentation/code/checkout-success.png)
+![checkout_success.html]()
 
 </details>
 
 <details>
 <summary> <strong>checkout.html</strong></summary>
 
-![checkout.html](/documentation/code/checkout.png)
+![checkout.html]()
 
 </details>
 
 <details>
 <summary> <strong>edit_product.html</strong></summary>
 
-![edit_product.html](/documentation/code/edit_product.png)
+![edit_product.html]()
 
 </details>
 
