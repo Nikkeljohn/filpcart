@@ -996,7 +996,7 @@ You can clone the repository by following these steps:
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/omurilolima/guitar-store)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)]()
 
 Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
 A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
@@ -1006,7 +1006,7 @@ A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/conf
 By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
 You can fork this repository by using the following steps:
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/omurilolima/guitar-store)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Nikkeljohn)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
@@ -1051,14 +1051,15 @@ Back to [top](#table-of-contents)
 
 ### Content
 
-- All the guitar images were taken from [Thomann](https://www.thomann.de/ie/index.html).
-- All the blog content was taken from the [Guitar Player](https://www.guitarplayer.com/)
+- All the producrt  images were taken from google 
+
 - README Documenting was inspired by [Retro Reboot](https://github.com/adamgilroy22/retro-reboot/) and [FreshCats](https://github.com/RickofManc/fresh-casts)
 
 ### Acknowledgements
 
-- I would like to thank my wife (Larissa Paz), for believing in me, and allowing me to make this transition into software development.
-- I would like to thank my Code Institute's menthor, Brian Macharia, and the tutor team for their assistance with troubleshooting and debugging some project issues.
+- I would like to thank my wife (shintu), for believing in me, and allowing me to make this transition into software development.
+- I would like to thank my Code Institute's mentor (Dasiy and )&(Juliia_Konn), and the tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the Code Institute Slack community for the moral support; it kept me going during periods of self doubt and imposter syndrome.
+- I would like to thank the my friends and family.
 
 Back to [top](#table-of-contents)
