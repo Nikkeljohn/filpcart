@@ -498,14 +498,14 @@ Inside, I've included the default settings as follows:
 User-agent: *
 Disallow: /profiles/
 Disallow: /bag/
-Sitemap: https://murilo-guitar-shop-dee69b8139e5.herokuapp.com/sitemap.xml
+
 ```
 
 ### Social Media Marketing
 
 Building a robust social network with active participation and connecting it to your business website can lead to increased sales.
 
-I've created a Facebook business account wich can be acessed in the [following url](https://www.facebook.com/profile.php?id=100095596562947) by the time when this project was sent to Code Institute's validation, but sometimes Facebook exclude 'fake business pages' like these:
+I've created a Facebook business account wich can be acessed in the [following url](https://www.facebook.com/profile.php?id=61550252952582) by the time when this project was sent to Code Institute's validation, but sometimes Facebook exclude 'fake business pages' like these:
 
 ![facebook-page](documentation/facebook-page.png)
 
@@ -540,16 +540,11 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 <details>
 <summary> <strong>bag.html</strong></summary>
 
-![bag.html](/documentation/code/bag.png)
+![bag.html](/images/bag.png)
 
 </details>
 
-<details>
-<summary> <strong>blog.html</strong></summary>
 
-![blog.html](/documentation/code/blog.png)
-
-</details>
 
 <details>
 <summary> <strong>checkout_success.html</strong></summary>
@@ -614,7 +609,7 @@ CSS file validation results generated with W3C Validation Service
 <details>
 <summary> <strong>checkout.css</strong></summary>
 
-![checkout-css](/documentation/code/checkout-css.png)
+![checkout-css]()
 
 </details>
 
@@ -985,13 +980,13 @@ If you'd like to backup your database models, use the following command for each
 
 You can clone the repository by following these steps:
 
-1. Go to the [GitHub repository](https://github.com/omurilolima/guitar-store) 
+1. Go to the [GitHub repository](https://github.com/Nikkeljohn/filpcart) 
 2. Locate the Code button above the list of files and click it 
 3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
 4. Open Git Bash or Terminal
 5. Change the current working directory to the one where you want the cloned directory
 6. In your IDE Terminal, type the following command to clone my repository:
-	- `git clone https://github.com/omurilolima/guitar-store.git`
+	- `git clone https://github.com/Nikkeljohn/filpcart`
 7. Press Enter to create your local clone.
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
