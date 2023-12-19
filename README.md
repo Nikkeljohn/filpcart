@@ -684,16 +684,8 @@ forms.py
 | CheckoutForm - county required | Input empty value and click submit | Error message: “This field is required” | PASS |
 | CommentForm body | Input empty value and click submit | Error message: “This field is required” | PASS |
 | CommentForm fields | body field is explicit in form metaclass  | Field displayed | PASS |
-| Add comment | Add a comment in a blog post  | Comment added | PASS |
-| ReviewForm body | Input empty value and click submit | Error message: “This field is required” | PASS |
-| ReviewForm fields | body field is explicit in form metaclass  | Field displayed | PASS |
-| Add review | Add a product review  | Review added | PASS |
-
-### Automatic test:  Models
-| Test Label | Test Action | Expected Outcome | Test Outcome |
-| --- | --- | --- | --- |
-| Create Product | Testing create a product | Product created | PASS |
-| Comment | Creating a comment | str( ) method called by str() return the default f-string. | PASS |
+| 
+| Add review | Add a product review  | Review added | PASS 
 
 
 ### Automatic test: Views
@@ -707,13 +699,13 @@ forms.py
 | edit_product | Testing update product info in the store | Product info is updated  | PASS |
 | delete_product | Testing delete a product | Product is deleted | PASS |
 | Bag page | Testing load bag page | Page loaded with bag/bag.html template | PASS |
-| Add to Bag | Testing add a product in the bag and the bag in the session | Product added to the bag and the session | PASS |
+|
 
 Back to [top](#table-of-contents)
 
 ## Configuration and Deployment
 
-The live deployed application can be found deployed on https://murilo-guitar-shop-dee69b8139e5.herokuapp.com/ 
+The live deployed application can be found deployed on https://myhome-1-30d4043086e4.herokuapp.com/
 
 ### ElephantSQL Database
 
@@ -800,7 +792,7 @@ Back on the AWS Services Menu, search for and open **IAM** (Identity and Access 
 Once on the IAM page, follow these steps:
 
 - From **User Groups**, click **Create New Group**.
-	- Suggested Name: `group-guitar-store` (group + the project name)
+	- Suggested Name: `flipcart` (group + the project name)
 - Tags are optional, but you must click it to get to the **review policy** page.
 - From **User Groups**, select your newly created group, and go to the **Permissions** tab.
 - Open the **Add Permissions** dropdown, and click **Attach Policies**.
@@ -826,7 +818,7 @@ Once on the IAM page, follow these steps:
 		```
 	
 	- Click **Review Policy**.
-	- Suggested Name: `policy-guitar-store` (policy + the project name)
+	- Suggested Name: `policy-flipcart` (policy + the project name)
 	- Provide a description:
 		- "Access to S3 Bucket for guitar-store static files."
 	- Click **Create Policy**.
@@ -834,9 +826,9 @@ Once on the IAM page, follow these steps:
 - Click **Attach Policy**.
 - Search for the policy you've just created ("policy-guitar-store") and select it, then **Attach Policy**.
 - From **User Groups**, click **Add User**.
-	- Suggested Name: `user-guitar-store` (user + the project name)
+	- Suggested Name: `user-filpcart` (user + the project name)
 - For "Select AWS Access Type", select **Programmatic Access**.
-- Select the group to add your new user to: `group-guitar-store`
+- Select the group to add your new user to: `group-filpkart`
 - Tags are optional, but you must click it to get to the **review user** page.
 - Click **Create User** once done.
 - You should see a button to **Download .csv**, so click it to save a copy on your system.
