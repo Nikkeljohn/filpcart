@@ -485,14 +485,16 @@ Building a robust social network with active participation and connecting it to 
 
 I've created a Facebook business account wich can be acessed in the [following url](https://www.facebook.com/profile.php?id=61550252952582) by the time when this project was sent to Code Institute's validation, but sometimes Facebook exclude 'fake business pages' like these:
 
-![facebook-page](documentation/facebook-page.png)
+![facebook-page](/images/fb.png)
 
 ### Newsletter Marketing
+
+## To do
 
 In the website footer there is a newsletter sign-up form, to allow users to supply their
 email address if they are interested in receiving news and discounts cupoms.
 
-![newsletter](documentation/footer.png)
+![newsletter]
 
 Back to [top](#table-of-contents)
 
@@ -548,28 +550,28 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 <details>
 <summary> <strong>post_detail.html</strong></summary>
 
-![post-detail.html](/documentation/code/post_detail.png)
+![post-detail.html]()
 
 </details>
 
 <details>
 <summary> <strong>products.html</strong></summary>
 
-![products.html](/documentation/code/products.png)
+![products.html]()
 
 </details>
 
 <details>
 <summary> <strong>product-detail.html</strong></summary>
 
-![product-detail.html](/documentation/code/product-detail.png)
+![product-detail.html]()
 
 </details>
 
 <details>
 <summary> <strong>profile.html</strong></summary>
 
-![profile.html](/documentation/code/profile.png)
+![profile.html]()
 
 </details>
 
@@ -580,7 +582,7 @@ CSS file validation results generated with W3C Validation Service
 <details>
 <summary> <strong>base.css</strong></summary>
 
-![base-css](/documentation/code/base-css.png)
+![base-css]()
 
 </details>
 
