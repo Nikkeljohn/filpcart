@@ -929,8 +929,9 @@ Sample `env.py` file:
 ```python
 import os
 
-os.environ.setdefault("AWS_ACCESS_KEY_ID", "user's own value")
-os.environ.setdefault("AWS_SECRET_ACCESS_KEY", "user's own value")
+os.environ.setdefault["CLOUDINARY_API_KEY", "user's own value"] 
+os.environ.setdefault["CLOUDINARY_API_SECRET" ,"user's own value"]
+os.environ.setdefault["CLOUDINARY_CLOUD_NAME", "user's own value"]
 os.environ.setdefault("DATABASE_URL", "user's own value")
 os.environ.setdefault("EMAIL_HOST_PASS", "user's own value")
 os.environ.setdefault("EMAIL_HOST_USER", "user's own value")
@@ -996,7 +997,7 @@ Back to [top](#table-of-contents)
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 
 ### Hosting and Database
-- [AWS S3](https://aws.amazon.com/s3) used for online static file storage.- 
+- [Cloudinary](https://console.cloudinary.com) used for online static file storage.- 
 - [GitHub](https://github.com) used for secure online code storage.
 
 ### Frameworks and Libraries
