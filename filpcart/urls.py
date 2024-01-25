@@ -30,6 +30,8 @@ urlpatterns = [
     path('bag/', include('bag.urls')),
     path('payment/', include('payment.urls')),
     path('profile/', include('profiles.urls')),
+    path('blog/', include('blog.urls')),
+    path('summernote/', include('django_summernote.urls')),
   
     
 

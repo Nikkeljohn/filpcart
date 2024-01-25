@@ -51,12 +51,13 @@ INSTALLED_APPS = [
     'profiles',
     'cloudinary_storage',
     'cloudinary',
-    
+    'blog',
 
 
      # Other
     'crispy_forms',
     'storages',
+    'django_summernote',
 
   
 ]

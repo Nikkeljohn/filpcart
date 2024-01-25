@@ -265,6 +265,39 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+/* Blog */
+.blog {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.post_list {
+    display: flex;
+    flex-flow: row;
+}
+
+
+.post_list img {
+    width: inherit;
+    height: 17rem;
+    object-fit: cover;
+}
+
+.post_list .card {
+    width: 21rem;
+    height: 35em;
+    margin-bottom: 3rem;
+}
+
+.post_list h2 {
+    font-size: 24px;
+}
+
+.post_list p, 
+small {
+    font-size: 16px;
+}
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
