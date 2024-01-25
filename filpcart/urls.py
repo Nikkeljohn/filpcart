@@ -30,7 +30,7 @@ urlpatterns = [
     path('bag/', include('bag.urls')),
     path('payment/', include('payment.urls')),
     path('profile/', include('profiles.urls')),
-    path('contact/', views.contact_us, name="contact"),
+  
     
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
