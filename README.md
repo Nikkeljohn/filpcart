@@ -72,19 +72,19 @@ The MyHome Store is a comprehensive Django website specialized created for an Ir
 ### Business goals addressed with this site
 - Build brand awareness;
 - Prensent the business value proposition with high-quality content;
-- Catch customer's attention and offer a good experience on buying a new guitar.
+- Catch customer's attention and offer a good experience on buying product.
 
 ### Customer needs
-- Understand the purpose of the Guitar Store;
-- Buy a new guitar.
+- Understand the purpose of the store;
+- Buy a new product.
 - Keep Order History.
 - Signup to the newsletter for receiving news and 
 discount cupoms.
-- Interact with content about music and guitar;
+- Interact with content about new arrivals and deals;
 
 ### Ideal client
 - English speaking;
-- Has interest about sell or buy houses;
+- Has interest about sell or buy houses hold items;
 - Want to buy a household items.
 
 Back to [top](#table-of-contents)
@@ -111,7 +111,7 @@ I used Google Fonts to select and import the font Poppins, including for main he
 
 ### Images and Post Content
 
-All the house images on the site were gathered on [Freepik](hhttps://www.freepik.com/free-photos-vectors/indian-house/80) website.
+All the  images on the site were gathered on [Amazon](https://www.amazon.com/ref=nav_logo) website.
 The blog posts were oginaly published by []() magazine.
 
 ### Wireframes
@@ -240,12 +240,13 @@ Back to [top](#table-of-contents)
 | Review Product | As a logged user, you can leave a product review and help other users who are interested in that produc too. |  |
 | Blog page | Displays a list of articles about music and products that are sold on the site. |  |
 | Blog post | Displays an article and the comment setion. |  |
+|Contact form| Allows the user to send a message to the Site Admin. | |
+	
 
 
 ### Features to Implement in Future
 
-- Contact form: Allows the user to send a message to the Site Admin.
-	- As a site user I want to contact the site owners so that I can request further information or lodge a complaint.
+
 - Delete account: Allows the user to delete their account
 - Wishlist: Allow the user to add a product to their wishlist so that they can receive news and offers about that product.
 
@@ -301,21 +302,14 @@ class UserProfile(models.Model):
     A user profile model for maintaining default
     delivery information and order history
     """
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    default_phone_number = models.CharField(
-        max_length=20, null=True, blank=True)
-    default_street_address1 = models.CharField(
-        max_length=80, null=True, blank=True)
-    default_street_address2 = models.CharField(
-        max_length=80, null=True, blank=True)
-    default_town_or_city = models.CharField(
-        max_length=40, null=True, blank=True)
-    default_county = models.CharField(
-        max_length=80, null=True, blank=True)
-    default_postcode = models.CharField(
-        max_length=20, null=True, blank=True)
-    default_country = CountryField(
-        blank_label='Country', null=True, blank=True)
+   user = models.OneToOneField(User, on_delete=models.CASCADE)
+    default_phone_number = models.CharField(max_length=20, null=True, blank=True)
+    default_street_address1 = models.CharField(max_length=80, null=True, blank=True)
+    default_street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    default_town_or_city = models.CharField(max_length=40, null=True, blank=True)
+    default_county = models.CharField(max_length=80, null=True, blank=True)
+    default_postcode = models.CharField(max_length=20, null=True, blank=True)
+    default_country = CountryField(blank_label='Country', null=True, blank=True)
 
     def __str__(self):
         return self.user.username
@@ -328,8 +322,7 @@ class Order(models.Model):
 
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
-                                     null=True, blank=True,
-                                     related_name='orders')
+                                     null=True, blank=True, related_name='orders')
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
@@ -340,16 +333,11 @@ class Order(models.Model):
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
     county = models.CharField(max_length=80, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
-    delivery_cost = models.DecimalField(
-        max_digits=6, decimal_places=2, null=False, default=0)
-    order_total = models.DecimalField(
-        max_digits=10, decimal_places=2, null=False, default=0)
-    grand_total = models.DecimalField(
-        max_digits=10, decimal_places=2, null=False, default=0)
-    original_bag = models.TextField(
-        null=False, blank=False, default='')
-    stripe_pid = models.CharField(
-        max_length=254, null=False, blank=False, default='')
+    delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
+    order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    original_bag = models.TextField(null=False, blank=False, default='')
+    stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
 
     def _generate_order_number(self):
         """
@@ -435,22 +423,22 @@ class Post(models.Model):
         return self.likes.count()
 ```
 
-- Comment
-```python
-class Comment(models.Model):
-    post = models.ForeignKey(
-        Post, on_delete=models.CASCADE, related_name='comments')
-    name = models.CharField(max_length=80)
-    email = models.EmailField()
-    body = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
 
-    class Meta:
-        ordering = ['created_on']
+- Contact
+```python
+class Contact(models.Model):
+    name = models.CharField(max_length=250)
+    email = models.EmailField()
+    subject = models.CharField(max_length=250)
+    message = models.TextField()
+    added_on = models.DateTimeField(auto_now_add=True)
+    is_approved = models.BooleanField(default=True)
 
     def __str__(self):
-        return f'Comment {self.body} by {self.name}'
+        return self.name
+
+    class Meta:
+        verbose_name_plural = "Contact Table"
 ```
 
 Back to [top](#table-of-contents)
@@ -492,7 +480,7 @@ I've created a Facebook business account wich can be acessed in the [following u
 ## To do
 
 In the website footer there is a newsletter sign-up form, to allow users to supply their
-email address if they are interested in receiving news and discounts cupoms.
+email address if they are interested in receiving news.
 
 ![newsletter]
 
@@ -616,31 +604,15 @@ See more on [Stripe site](https://stripe.com/docs/testing#testing-interactively)
 ### Browser Testing
 I have tested this application works on the following installed browsers, using a Dell laptop on Windows OS:
 
-- Microsoft Edge 112.0.1722.68
-- Google Chrome Version 112.0.5615.138
-- Firefox Browser 112.0.1
+- Google Chrome Version 
 
-I have tested this application works on the following Android devices using Chrome browser 112.0.5615.138:
-
-- Samsung Galaxy S20FE with Android 13.
-- Samsung Galaxy S22 with Android 13.
 
 ### Responsiveness
 I used Chrome developer tool to check the responsiveness on different screen sizes:
 - 375px (Mobile)
 - 728px (Tablet)
 - 1024px (laptop)
-- 4k (Monitor resolution)
 
-### Automatic Testing
-
-Django testing tools have been used to perform basic automatic testing on Guitar Store Python code for validating the main logical thing. Tests were run using the local SQLite3 database as opposed to the production PostgreSQL database. Those tests achieve 70% coverage.
-
-Test scripts were written for all models.py, forms.py and views.py of the project apps (bag,checkout, , home, products and profiles);
-
-models.py
-views.py
-forms.py
 
 ### Automatic test: Forms
 | Test Label | Test Action | Expected Outcome | Test Outcome |
@@ -694,131 +666,6 @@ To obtain your own Postgres Database, sign-up with your GitHub account, then fol
 - Select the **Region** and **Data Center** closest to you.
 - Once created, click on the new database name, where you can view the database URL and Password.
 
-### Amazon AWS
-
-This project uses [AWS](https://aws.amazon.com) to store media and static files online, due to the fact that Heroku doesn't persist this type of data.
-
-Once you've created an AWS account and logged-in, follow these series of steps to get your project connected.
-Make sure you're on the **AWS Management Console** page.
-
-#### S3 Bucket
-
-- Search for **S3**.
-- Create a new bucket, give it a name (matching your Heroku app name), and choose the region closest to you.
-- Uncheck **Block all public access**, and acknowledge that the bucket will be public (required for it to work on Heroku).
-- From **Object Ownership**, make sure to have **ACLs enabled**, and **Bucket owner preferred** selected.
-- From the **Properties** tab, turn on static website hosting, and type `index.html` and `error.html` in their respective fields, then click **Save**.
-- From the **Permissions** tab, paste in the following CORS configuration:
-
-	```shell
-	[
-		{
-			"AllowedHeaders": [
-				"Authorization"
-			],
-			"AllowedMethods": [
-				"GET"
-			],
-			"AllowedOrigins": [
-				"*"
-			],
-			"ExposeHeaders": []
-		}
-	]
-	```
-
-- Copy your **ARN** string.
-- From the **Bucket Policy** tab, select the **Policy Generator** link, and use the following steps:
-	- Policy Type: **S3 Bucket Policy**
-	- Effect: **Allow**
-	- Principal: `*`
-	- Actions: **GetObject**
-	- Amazon Resource Name (ARN): **paste-your-ARN-here**
-	- Click **Add Statement**
-	- Click **Generate Policy**
-	- Copy the entire Policy, and paste it into the **Bucket Policy Editor**
-
-		```shell
-		{
-			"Id": "Policy1234567890",
-			"Version": "2012-10-17",
-			"Statement": [
-				{
-					"Sid": "Stmt1234567890",
-					"Action": [
-						"s3:GetObject"
-					],
-					"Effect": "Allow",
-					"Resource": "arn:aws:s3:::your-bucket-name/*"
-					"Principal": "*",
-				}
-			]
-		}
-		```
-
-	- Before you click "Save", add `/*` to the end of the Resource key in the Bucket Policy Editor (like above).
-	- Click **Save**.
-- From the **Access Control List (ACL)** section, click "Edit" and enable **List** for **Everyone (public access)**, and accept the warning box.
-	- If the edit button is disabled, you need to change the **Object Ownership** section above to **ACLs enabled** (mentioned above).
-
-#### IAM
-
-Back on the AWS Services Menu, search for and open **IAM** (Identity and Access Management).
-Once on the IAM page, follow these steps:
-
-- From **User Groups**, click **Create New Group**.
-	- Suggested Name: `flipcart` (group + the project name)
-- Tags are optional, but you must click it to get to the **review policy** page.
-- From **User Groups**, select your newly created group, and go to the **Permissions** tab.
-- Open the **Add Permissions** dropdown, and click **Attach Policies**.
-- Select the policy, then click **Add Permissions** at the bottom when finished.
-- From the **JSON** tab, select the **Import Managed Policy** link.
-	- Search for **S3**, select the `AmazonS3FullAccess` policy, and then **Import**.
-	- You'll need your ARN from the S3 Bucket copied again, which is pasted into "Resources" key on the Policy.
-
-		```shell
-		{
-			"Version": "2012-10-17",
-			"Statement": [
-				{
-					"Effect": "Allow",
-					"Action": "s3:*",
-					"Resource": [
-						"arn:aws:s3:::your-bucket-name",
-						"arn:aws:s3:::your-bucket-name/*"
-					]
-				}
-			]
-		}
-		```
-	
-	- Click **Review Policy**.
-	- Suggested Name: `policy-flipcart` (policy + the project name)
-	- Provide a description:
-		- "Access to S3 Bucket for guitar-store static files."
-	- Click **Create Policy**.
-- From **User Groups**, click your "group-guitar-store".
-- Click **Attach Policy**.
-- Search for the policy you've just created ("policy-guitar-store") and select it, then **Attach Policy**.
-- From **User Groups**, click **Add User**.
-	- Suggested Name: `user-filpcart` (user + the project name)
-- For "Select AWS Access Type", select **Programmatic Access**.
-- Select the group to add your new user to: `group-filpkart`
-- Tags are optional, but you must click it to get to the **review user** page.
-- Click **Create User** once done.
-- You should see a button to **Download .csv**, so click it to save a copy on your system.
-	- **IMPORTANT**: once you pass this page, you cannot come back to download it again, so do it immediately!
-	- This contains the user's **Access key ID** and **Secret access key**.
-	- `AWS_ACCESS_KEY_ID` = **Access key ID**
-	- `AWS_SECRET_ACCESS_KEY` = **Secret access key**
-
-#### Final AWS Setup
-
-- If Heroku Config Vars has `DISABLE_COLLECTSTATIC` still, this can be removed now, so that AWS will handle the static files.
-- Back within **S3**, create a new folder called: `media`.
-- Select any existing media images for your project to prepare them for being uploaded into the new folder.
-- Under **Manage Public Permissions**, select **Grant public read access to this object(s)**.
-- No further settings are required, so click **Upload**.
 
 ### Stripe API
 
@@ -875,17 +722,16 @@ Deployment steps are as follows, after account setup:
 
 | Key | Value |
 | --- | --- |
-| `AWS_ACCESS_KEY_ID` | user's own value |
-| `AWS_SECRET_ACCESS_KEY` | user's own value |
+| `CLOUDINARY_API_KEY` | user's own value |
+| `CLOUDINARY_API_SECRET` | user's own value |
 | `DATABASE_URL` | user's own value |
-| `DISABLE_COLLECTSTATIC` | 1 (*this is temporary, and can be removed for the final deployment*) |
 | `EMAIL_HOST_PASS` | user's own value |
 | `EMAIL_HOST_USER` | user's own value |
 | `SECRET_KEY` | user's own value |
 | `STRIPE_PUBLIC_KEY` | user's own value |
 | `STRIPE_SECRET_KEY` | user's own value |
 | `STRIPE_WH_SECRET` | user's own value |
-| `USE_AWS` | True |
+
 
 Heroku needs two additional files in order to deploy properly.
 - requirements.txt
