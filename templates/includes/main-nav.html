@@ -31,11 +31,7 @@
                 </a>
             </div>
         </li>
-        <li class="nav-item d-block">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
-                Contact
-            </a>
-        </li>
+    
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'blog' %}">
@@ -47,7 +43,7 @@
             <a href="{% url 'contact' %}" class="nav-item nav-link text-black">Contact</a>
     {% if user.is_authenticated %}
     <div class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user"></i></a>
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user btn-danger"></i></a>
         <div class="dropdown-menu">
             {% if user.is_superuser or user.is_staff %}
             <a href="{% url 'admin:index' %}" class="dropdown-item">admin/page</a>
@@ -58,7 +54,7 @@
         </div>
     </div>
     {% else %}
-    <a href="{% url 'register' %}" class="nav-link"><i class="fas fa-user"></i></a>
+    <a href="{% url 'register' %}" class="nav-link"><i class="fas fa-user "></i></a>
     {% endif %}
         </li>
 
