@@ -209,11 +209,7 @@ View a full list of user stories [here](https://github.com/users/Nikkeljohn/proj
 - As a site admin I want to send emails to people who signed up to the site's mailing list so that I can send out news and offers to them. `(WON'T HAVE)`
 - As a site admin I want to be able to share the business on Facebook so that I can reach and market to a broader audience. `(SHOULD HAVE)`
 
-### EPIC 7: Tests
-- Manual testing
-- Automatic test: Views
-- Automatic test: Forms
-- Automatic test: Model
+
 
 Back to [top](#table-of-contents)
 
