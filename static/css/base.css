@@ -3,8 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/retro-living-room-interior-design.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: url('/https://res.cloudinary.com/dmpkastfr/image/upload/v1711881617/retro-living-room-interior-design_3_q5ucpm.jpg') no-repeat center center fixed;
     height: 100vh;
     color: #555;
     font-family: 'Lato';

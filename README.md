@@ -130,7 +130,7 @@ Back to [top](#table-of-contents)
 
 ### Strategy
 
- This project uses Agile Methodology. A planning session generated 34 Tasks through 29 User Stories and 8 Epics, each one with their acceptance criterias. 2 of then was not implemented and they are listed in the "Features to Implement in the Future" session. The development process was based on iterative incremental philosophy, adopting 1 week sprints with the following goals:
+ This project uses Agile Methodology. A planning session generated 34 Tasks through 19 User Stories and 8 Epics, each one with their acceptance criterias. 2 of then was not implemented and they are listed in the "Features to Implement in the Future" session. The development process was based on iterative incremental philosophy, adopting 1 week sprints with the following goals:
 
 - <strong>Week 1</strong>: Basic structure and features running with boilerplate design and content.
 - <strong>Week 2</strong>: CRUD functionalities of product section running with boilerplate design and content.

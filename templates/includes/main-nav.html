@@ -46,7 +46,7 @@
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user btn-danger"></i></a>
         <div class="dropdown-menu">
             {% if user.is_superuser or user.is_staff %}
-            <a href="{% url 'admin:index' %}" class="dropdown-item">admin/page</a>
+            
             {% else %}
             
             {% endif %}
