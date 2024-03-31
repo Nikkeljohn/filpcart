@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 import dj_database_url
+from django.core.management.utils import get_random_secret_key
 if os.path.exists('env.py'):
     import env
 
@@ -23,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = os.environ.get("SECRET_KEY", get_random_secret_key())
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG") == "True"
@@ -199,6 +200,11 @@ else:
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dmpkastfr',
+    'API_KEY': '213252453514686',
+    'API_SECRET': 'UNJFjxVJVvEtzVMCFCZZu1MvRvg'
+}
     # Bucket Config
    # AWS_STORAGE_BUCKET_NAME = 'ckz8780-boutique-ado'
     #AWS_S3_REGION_NAME = 'us-east-1'
