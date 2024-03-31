@@ -149,7 +149,7 @@
                         <form method="post" action="{% url 'add_product_review' product.id %}" style="margin-top: 1.3em;">
                             {{ review_form | crispy }}
                             {% csrf_token %}
-                            <button type="submit" class="btn btn-signup btn-black mt-2">Submit</button>
+                            <button type="submit" class="btn btn-signup btn-success mt-2">Submit</button>
                         </form>
                     {% endif %}
                 {% endif %}
