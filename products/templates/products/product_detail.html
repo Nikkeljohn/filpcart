@@ -140,11 +140,11 @@
             <div class="card-body">
                 {% if reviewed %}
                     <div class="alert alert-success" role="alert">
-                        Your comment is awaiting approval
+                        Your review is awaiting approval
                     </div>
                 {% else %}
                     {% if user.is_authenticated %}
-                        <h3>Leave a review:</h3>
+                        <h3>Customer reviews:</h3>
                         <p>Posting as: <strong>{{ user.username }}</strong></p>
                         <form method="post" action="{% url 'add_product_review' product.id %}" style="margin-top: 1.3em;">
                             {{ review_form | crispy }}
