@@ -108,7 +108,7 @@
         <div class="col-md-4 card mb-4 mt-3 mr-3">
             <div class="card-body">
                 {% if user.is_authenticated %}
-                <h3>Reviews:</h3>
+                <h3>Customer reviews:</h3>
                 <!-- For loop to iterate through each review in reviews -->
                 {% for review in reviews %}
                 <div class="card mt-2" style="padding: 10px;">
@@ -144,7 +144,7 @@
                     </div>
                 {% else %}
                     {% if user.is_authenticated %}
-                        <h3>Customer reviews:</h3>
+                        <h3> Type your review:</h3>
                         <p>Posting as: <strong>{{ user.username }}</strong></p>
                         <form method="post" action="{% url 'add_product_review' product.id %}" style="margin-top: 1.3em;">
                             {{ review_form | crispy }}
