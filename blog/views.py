@@ -1,6 +1,3 @@
-from django.shortcuts import render
-
-# Create your views here.
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.views.generic.detail import DetailView
@@ -18,7 +15,7 @@ class PostList(generic.ListView):
     """
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
-    template_name = 'blog/blog.html'
+    template_name = 'blog/index.html'
     paginate_by = 6
 
 

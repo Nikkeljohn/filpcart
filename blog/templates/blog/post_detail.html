@@ -7,11 +7,6 @@
             <div class="col"></div>
         </div>
     </div>
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
 {% endblock %}
 
 {% block content %}
@@ -118,7 +113,7 @@
                             <form method="post">
                                 {{ comment_form | crispy }}
                                 {% csrf_token %}
-                                <button type="submit" class="btn btn-signup mt-2 btn btn-danger">Submit</button>
+                                <button type="submit" class="btn btn-signup mt-2">Submit</button>
                             </form>
                 {% endif %}
                 {% endif %}
