@@ -4,6 +4,7 @@ from django import forms
 from filpcart import settings
 
 
+
 STATUS = ((0, 'Draft'), (1, 'Published'))
 
 
@@ -13,12 +14,15 @@ class Post(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='blog_post')
     updated_on = models.DateTimeField(auto_now=True)
-    content = models.TextField()
     featured_image = models.ImageField(null=True, blank=True)
     excerpt = models.TextField(blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
+    our_rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
+
+   
+  
 
     class Meta:
         ordering = ['-created_on']
@@ -44,3 +48,7 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'Comment {self.body} by {self.name}'
+
+
+    # Other fields and methods...
+

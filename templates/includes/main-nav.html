@@ -41,18 +41,7 @@
 
         <li class="nav-item dropdown">
             <a href="{% url 'contact' %}" class="nav-item nav-link text-black">Contact</a>
-    {% if user.is_authenticated %}
 
-            {% if user.is_superuser or user.is_staff %}
-            
-            {% else %}
-            
-            {% endif %}
-           
-        </div>
-    </div>
-    {% else %}
-    {% endif %}
         </li>
 
       
