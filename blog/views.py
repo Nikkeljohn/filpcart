@@ -34,15 +34,15 @@ class PostDetail(View):
 
         return render(
             request,
-            'blog/post_detail.html',
-            {
+             'blog/post_detail.html',
+             {
                 'post': post,
                 'comments': comments,
                 'commented': False,
                 'liked': liked,
                 'comment_form': CommentForm()
-            }
-        )
+             }
+         )
 
     def post(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
@@ -65,16 +65,16 @@ class PostDetail(View):
             comment_form = CommentForm()
 
         return render(
-            request,
-            'blog/post_detail.html',
-            {
+            request, 
+               'blog/post_detail.html',
+             {
                 'post': post,
                 'comments': comments,
                 'commented': True,
                 'liked': liked,
                 'comment_form': CommentForm()
-            }
-        )
+             }
+         )
 
 
 class PostLike(LoginRequiredMixin, View):
@@ -91,3 +91,4 @@ class PostLike(LoginRequiredMixin, View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+

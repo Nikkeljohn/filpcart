@@ -15,8 +15,9 @@ class Post(models.Model):
         User, on_delete=models.CASCADE, related_name='blog_post')
     updated_on = models.DateTimeField(auto_now=True)
     featured_image = models.ImageField(null=True, blank=True)
+    content = models.TextField(null=True)
     excerpt = models.TextField(blank=True)
-    price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    price = models.DecimalField(max_digits=6, decimal_places=2, null=True)
     our_rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
@@ -25,8 +26,10 @@ class Post(models.Model):
     class Meta:
         ordering = ['-created_on']
 
+
     def __str__(self):
         return self.title
+
 
     def number_of_likes(self):
         return self.likes.count()
@@ -43,6 +46,7 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ['created_on']
+
 
     def __str__(self):
         return f'Comment {self.body} by {self.name}'
