@@ -16,7 +16,7 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     featured_image = models.ImageField(null=True, blank=True)
     content = models.TextField(null=True)
-    price = models.DecimalField(default=0, max_digits=6, decimal_places=2,)
+    price = models.DecimalField( max_digits=6, decimal_places=2,)
     excerpt = models.TextField(blank=True)
     brand = models.CharField(default=0, max_length=200, unique=True)
     review = models.TextField(blank=True)
