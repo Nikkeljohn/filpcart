@@ -18,7 +18,7 @@ class Post(models.Model):
     content = models.TextField(null=True)
     price = models.DecimalField( max_digits=6, decimal_places=2,)
     excerpt = models.TextField(blank=True)
-    brand = models.CharField(default=0, max_length=200, unique=True)
+    brand = models.CharField(max_length=200, unique=True)
     review = models.TextField(blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
