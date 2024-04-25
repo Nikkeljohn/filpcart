@@ -14,7 +14,6 @@ class Post(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='blog_post')
     updated_on = models.DateTimeField(auto_now=True)
-    featured_image = models.ImageField(null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     content = models.TextField(null=True)
     price = models.DecimalField( max_digits=6, decimal_places=2,)
