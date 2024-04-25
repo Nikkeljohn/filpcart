@@ -23,7 +23,7 @@
         </div>
         <div class="d-md-block col-md-6 col-sm-12 masthead-image">
             <!-- The featured image URL goes in the src attribute -->
-            <img src="{{ post.featured_image.url }}" width="100%" alt="Featured image">
+            <img src="{{ post.image.url }}" width="100%" alt="Featured image">
         </div>
     </div>
 </div>
@@ -51,7 +51,7 @@
                                 {% endif %}
                             </form>
                             {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            <span class="text-secondary"><i class="fa-solid fa-heart"></i></span>
                             {% endif %}
                         <!-- The number of likes goes before the closing strong tag -->
                         <span class="text-secondary">{{ post.number_of_likes }} </span>
