@@ -23,7 +23,7 @@
             {% for post in post_list %}
                 <div class="card">
                     <div class="card-img-top">
-                        {% if "placeholder" in post.featured_image.url %}
+                        {% if "placeholder" in post.image.url %}
                         <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
                         {% else %}
                         <img src=" {{ post.image.url }}">
