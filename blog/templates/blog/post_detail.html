@@ -28,10 +28,11 @@
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
                 <p class="card-text">{{ post.content | safe }}</p>
-                <p>Price: {{ post.price }}</p>
+                <p>Price: {{ post.price }}$</p>
                 <p>Brand: {{ post.brand }}</p>
                 <p>Review: {{ post.review }}</p>
                 <div class="row">
+
                     <div class="col-1">
                         <strong>
                             {% if user.is_authenticated %}
@@ -44,13 +45,18 @@
                                 {% endif %}
                             </form>
                             {% else %}
-                            <span class="text-secondary"><i class="fa-solid fa-heart"></i></span>
+                            <span class="text-secondary"><i class="far fa-heart"></i></span>
                             {% endif %}
-                            <span class="text-secondary">{{ post.number_of_likes }}</span>
+                        <!-- The number of likes goes before the closing strong tag -->
+                        <span class="text-secondary">{{ post.number_of_likes }} </span>
                         </strong>
                     </div>
                     <div class="col-1">
-                        <strong class="text-secondary"><i class="far fa-comments"></i> {{ post.comments.count }}</strong>
+                        {% with comments.count as total_comments %}
+                        <strong class="text-secondary "><i class="far fa-comments"></i>
+                            <!-- Our total_comments variable goes before the closing strong tag -->
+                            {{ total_comments }}</strong>
+                        {% endwith %}
                     </div>
                 </div>
             </div>
@@ -59,41 +65,54 @@
     <div class="row comments justify-content-center mb-4">
         <div class="col-md-7 mr-3 card">
             <div class="card-body">
+                {% if user.is_authenticated %}
                 <h3>Comments:</h3>
-                {% for comment in post.comments.all %}
+                <!-- For loop to iterate through each comment in comments -->
+                {% for comment in comments %}
                 <div class="comments card mt-2" style="padding: 10px;">
                     <p class="font-weight-bold">
                         <strong>{{ comment.name }}</strong> at
-                        <span class="fst-italic text-muted font-weight-normal">{{ comment.created_on }}</span> wrote:
+                        <span class="fst-italic text-muted font-weight-normal">
+                            {{ comment.created_on }}
+                        </span> wrote:
                     </p>
-                    <p>{{ comment.body | linebreaks }}</p>
+                    {{ comment.body | linebreaks }}
                 </div>
-                {% empty %}
-                <p>No comments yet.</p>
+                <!-- For loop ends here -->
                 {% endfor %}
+                {% else %}
+                <!-- Condition when the user is not authenticated -->
+                <h3>Comments:</h3>
+                <p class="fs-5">To see the comments and leave a comment, please log in or create an account.</p>
+                <a href="{% url 'account_login' %}">
+                    <button type="button" class="btn btn-signup btn-sm">Login</button>
+                </a>
+
+                <a href="{% url 'account_signup' %}">
+                    <button type="button" class="btn btn-signup btn-sm ms-2">Register</button>
+                </a>
+                {% endif %}
             </div>
         </div>
-        <div class="col-md-4 card">
-            <div class="card-body">
                 {% if user.is_authenticated %}
-                {% if commented %}
-                <div class="alert alert-success" role="alert">
-                    Your comment is awaiting approval
-                </div>
-                {% else %}
-                <h3>Leave a comment:</h3>
-                <p>Posting as: <strong>{{ user.username }}</strong></p>
-                <form method="post">
-                    {{ comment_form | crispy }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-danger btn btn-signup mt-2">Submit</button>
-                </form>
+                <div class="col-md-4 card">
+                    <div class="card-body">
+                        {% if commented %}
+                            <div class="alert alert-success" role="alert">
+                                Your comment is awaiting approval
+                            </div>
+                        {% else %}
+                            <h3>Leave a comment:</h3>
+                            <p>Posting as: <strong>{{ user.username }}</strong></p>
+                            <form method="post">
+                                {{ comment_form | crispy }}
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-signup mt-2 btn btn-danger">Submit</button>
+                            </form>
                 {% endif %}
-                {% else %}
-                <p class="fs-5">To see the comments and leave a comment, please <a href="{% url 'account_login' %}">log in</a> or <a href="{% url 'account_signup' %}">create an account</a>.</p>
                 {% endif %}
             </div>
         </div>
     </div>
-</div>
+</div>  
 {%endblock%}
