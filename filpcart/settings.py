@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True
 # "DEVELOPMENT" in os.environ
 
-ALLOWED_HOSTS = ['myhome-1-30d4043086e4.herokuapp.com','localhost','8000-nikkeljohn-filpcart-d99rok2cgys.ws-eu112.gitpod.io']
+ALLOWED_HOSTS = ['myhome-1-30d4043086e4.herokuapp.com','localhost','8000-nikkeljohn-filpcart-d99rok2cgys.ws-eu110.gitpod.io' ]
 
 
 # Application definition
@@ -131,17 +131,18 @@ LOGIN_REDIRECT_URL = '/'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
+
+DATABASES = {
+    'default': ({
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    } if 'DEV' in os.environ
+        else dj_database_url.parse(
+        os.environ.get('DATABASE_URL')
+    )
+    )
+}
+
 
 
 # Password validation

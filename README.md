@@ -484,6 +484,22 @@ Back to [top](#table-of-contents)
 
 ## Testing
 
+### CSS Code Validation
+![screenshot](/images/python/csscheck.png)
+
+### Python Code Validation
+![screenshot](/images/python/Screenshot%202024-05-02%20at%2012.36.21.png)
+![screenshot](/images/python/Screenshot%202024-05-02%20at%2012.36.21.png)
+![screenshot](/images/python/Screenshot%202024-05-02%20at%2012.36.21.png)
+![screenshot](/images/python/Screenshot%202024-05-02%20at%2013.25.51.png)
+![screenshot](/images/python/Screenshot%202024-05-02%20at%2013.42.55.png)
+![screenshot](/images/python/Screenshot%202024-05-02%20at%2013.46.09.png)
+![screenshot](/images/python/Screenshot%202024-05-02%20at%2013.51.21.png)
+![screenshot](/images/python/Screenshot%202024-05-02%20at%2014.19.40.png)
+![screenshot](/images/python/Screenshot%202024-05-02%20at%2014.33.51.png)
+![screenshot](/images/python/Screenshot%202024-05-02%20at%2014.20.35.png)
+
+
 ### HTML Code Validation
 
 The W3C Markup Validation Service was used to validate the HTML of the website. All Django template tags were manually removed with the HTML code copied and inserted to the base template.
@@ -610,41 +626,6 @@ I used Chrome developer tool to check the responsiveness on different screen siz
 - 1024px (laptop)
 
 
-### Automatic test: Forms
-| Test Label | Test Action | Expected Outcome | Test Outcome |
-| --- | --- | --- | --- |
-| ProductForm - Name | Input empty value and click submit | Error message: “This field is required” | PASS |
-| ProductForm - Description | Input empty value and click submit | Error message: “This field is required” | PASS |
-| ProductForm - Price | Input empty value and click submit | Error message: “This field is required” | PASS |
-| ProductForm - Image URL | Input empty value and click submit | Image URL is not required | PASS |
-| ProductForm - Fields displayed | Check if all fields are explicit in form_metaclass | All the listed fields in the ProductForm are shown for the user. | PASS |
-| CheckoutForm - full_name required | Input empty value and click submit | Error message: “This field is required” | PASS |
-| CheckoutForm - email required | Input empty value and click submit | Error message: “This field is required” | PASS |
-| CheckoutForm - phone_number required | Input empty value and click submit | Error message: “This field is required” | PASS |
-| CheckoutForm - street_address1 required | Input empty value and click submit | Error message: “This field is required” | PASS |
-| CheckoutForm - street_address2 not required | Input empty value and click submit | Error message: “This field is required” | PASS |
-| CheckoutForm - town_or_city required | Input empty value and click submit | Error message: “This field is required” | PASS |
-| CheckoutForm - county required | Input empty value and click submit | Error message: “This field is required” | PASS |
-| CommentForm body | Input empty value and click submit | Error message: “This field is required” | PASS |
-| CommentForm fields | body field is explicit in form metaclass  | Field displayed | PASS |
-| 
-| Add review | Add a product review  | Review added | PASS 
-
-
-### Automatic test: Views
-
-| Test Label | Test Action | Expected Outcome | Test Outcome |
-| --- | --- | --- | --- |
-| home | Testing load homepage | Page loaded with home/index.html template | PASS |
-| all_products | Testing load all products | Page loaded with products/products.html template | PASS |
-| product_detail | Testing load individual product details | Page loaded with products/product_detail.html template | PASS |
-| add_product as non-admin user | Testing add a product to the store with a non-admin user | Receives code 301 and is redirected | PASS |
-| edit_product | Testing update product info in the store | Product info is updated  | PASS |
-| delete_product | Testing delete a product | Product is deleted | PASS |
-| Bag page | Testing load bag page | Page loaded with bag/bag.html template | PASS |
-|
-
-Back to [top](#table-of-contents)
 
 ## Configuration and Deployment
 
