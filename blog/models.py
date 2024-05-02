@@ -3,8 +3,6 @@ from django.contrib.auth.models import User
 from django import forms
 from filpcart import settings
 
-
-
 STATUS = ((0, 'Draft'), (1, 'Published'))
 
 
@@ -16,7 +14,7 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     image = models.ImageField(null=True, blank=True)
     content = models.TextField(null=True)
-    price = models.DecimalField( max_digits=6, decimal_places=2,)
+    price = models.DecimalField(max_digits=6, decimal_places=2,)
     excerpt = models.TextField(blank=True)
     brand = models.CharField(max_length=200)
     review = models.TextField(blank=True)
@@ -28,12 +26,12 @@ class Post(models.Model):
         ordering = ['-created_on']
 
 
-    def __str__(self):
-        return self.title
+def __str__(self):
+    return self.title
 
 
-    def number_of_likes(self):
-        return self.likes.count()
+def number_of_likes(self):
+    return self.likes.count()
 
 
 class Comment(models.Model):
@@ -49,5 +47,5 @@ class Comment(models.Model):
         ordering = ['created_on']
 
 
-    def __str__(self):
-        return f'Comment {self.body} by {self.name}'
+def __str__(self):
+    return f'Comment {self.body} by {self.name}'
