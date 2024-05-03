@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -21,34 +21,36 @@
     <div class="row blog">
         <div class="col post_list">
             {% for post in post_list %}
-                <div class="card">
-                    <div class="card-img-top">
-                        {% if "placeholder" in post.image.url %}
-                        <img src="">
-                        {% else %}
-                        <img src=" {{ post.image.url }}">
-                        {% endif %}
-                    </div>
-                    <div class="card-body">
-                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                <h2 class="card-title text-black">{{ post.title|truncatechars:80 }}</h2>
-                                <p class="card-text text-black">{{ post.excerpt|truncatechars:100 }}</p>
-                            </a>
-                    </div>
-                    <div class="card-footer">
-                        <small class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
-                        {{ post.number_of_likes }}</small>
-                    </div>
+            <div class="card">
+                <div class="card-img-top">
+                    {% if "placeholder" in post.image.url %}
+                    <img src="" alt="Placeholder Image">
+                    {% else %}
+                    <img src="{{ post.image.url }}" alt="Post Image">
+                    {% endif %}
                 </div>
+            
+                <div class="card-body">
+                    <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                        <h2 class="card-title text-black">{{ post.title|truncatechars:80 }}</h2>
+                        <p class="card-text text-black">{{ post.excerpt|truncatechars:100 }}</p>
+                    </a>
+                </div>
+                <div class="card-footer">
+                    <small class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
+                        {{ post.number_of_likes }}</small>
+                </div>
+            </div>
             {% if forloop.counter|divisibleby:3 %}
         </div>
-        <div class="row">
+        </div> 
+        <div class="row"> 
             {% endif %}
             {% endfor %}
+        </div> 
+    </div> 
+</div> 
 
-        </div>
-    </div>
-</div>
 {% if is_paginated %}
 <nav aria-label="Page navigation">
     <ul class="pagination justify-content-center">
@@ -57,9 +59,8 @@
         {% endif %}
         {% if page_obj.has_next %}
         <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
         {% endif %}
     </ul>
 </nav>
 {% endif %}
-{%endblock%}
+{% endblock %}

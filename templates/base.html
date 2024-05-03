@@ -100,7 +100,7 @@
                             {% endif %}
                         </div>
                     </li>
-                    <ul class="list-inline-item">
+                    <li class="list-inline-item"> 
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_bag' %}">
                             <div class="text-center">
@@ -114,7 +114,7 @@
                                 </p>
                             </div>
                         </a>
-                    </ul>
+                    </li> 
                 </ul>
             </div>
         </div>
@@ -213,26 +213,28 @@
             <!-- Column 3 -->
             <div class="col-sm-4 col-lg-3">
                 <h5 class="text-uppercase">Social</h5>
-                <ul class="list-inline social-links mt-3">
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.facebook.com/profile.php?id=61550252952582" rel="nofollow">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                            <span class="sr-only">Facebook</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.linkedin.com/" rel="nofollow">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                            <span class="sr-only">LinkedIn</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.instagram.com/" rel="nofollow">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                            <span class="sr-only">Instagram</span>
-                        </a>
-                    </li>
-                </ul>
+                <nav>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a target="_blank" href="https://www.facebook.com/profile.php?id=61550252952582" rel="nofollow">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a target="_blank" href="https://www.linkedin.com/" rel="nofollow">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                <span class="sr-only">LinkedIn</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a target="_blank" href="https://www.instagram.com/" rel="nofollow">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
         <hr>
@@ -242,7 +244,7 @@
         </div>
     </footer>
 
-</body>
+
 {% block postloadjs %}
 <script type="text/javascript">
     $('.toast').toast('show');
@@ -270,5 +272,5 @@
     var $mcj = jQuery.noConflict(true);
 </script>
 {% endblock %}
-
+</body>
 </html>
