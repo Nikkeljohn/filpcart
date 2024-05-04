@@ -25,36 +25,39 @@
 
 <div class="container">
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
+        <div class="col card mb-4 mt-3 left top">
             <div class="card-body">
-                <p class="card-text">{{ post.content | safe }}</p>
+                <!-- The post content goes inside the card-text. -->
+                <!-- Use the | safe filter inside the template tags -->
+                <p class="card-text ">
+                    {{ post.content | safe }}
+                </p>
                 <p>Price: {{ post.price }}$</p>
                 <p>Brand: {{ post.brand }}</p>
                 <p>Review: {{ post.review }}</p>
                 <div class="row">
+
                     <div class="col-1">
-                        {% if user.is_authenticated %}
-                        <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                            {% csrf_token %}
-                            {% if liked %}
-                            <button type="submit" name="blogpost_id" value="{{post.slug}}"
-                                class="btn-like btn btn-danger"><i class="fas fa-heart"></i></button>
-                            {% else %}
-                            <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                    class="far fa-heart"></i></button>
-                            {% endif %}
-                        </form>
-                        {% else %}
-                        <span class="text-secondary"><i class="far fa-heart"></i></span>
-                        {% endif %}
-                        <!-- The number of likes goes after the form -->
                         <strong>
-                            <span class="text-secondary">{{ post.number_of_likes }} </span>
+                            {% if user.is_authenticated %}
+                            <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                                {% csrf_token %}
+                                {% if liked %}
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
+                                {% else %}
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
+                                {% endif %}
+                            </form>
+                            {% else %}
+                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            {% endif %}
+                        <!-- The number of likes goes before the closing strong tag -->
+                        <span class="text-secondary">{{ post.number_of_likes }} </span>
                         </strong>
                     </div>
                     <div class="col-1">
                         {% with comments.count as total_comments %}
-                        <strong class="text-secondary "><i class="far fa-comments"></i>
+                        <strong class="text-secondary"><i class="far fa-comments"></i>
                             <!-- Our total_comments variable goes before the closing strong tag -->
                             {{ total_comments }}</strong>
                         {% endwith %}
@@ -85,32 +88,35 @@
                 <!-- Condition when the user is not authenticated -->
                 <h3>Comments:</h3>
                 <p class="fs-5">To see the comments and leave a comment, please log in or create an account.</p>
-                <a href="{% url 'account_login' %}" class="btn btn-signup btn-sm btn btn-success">Login</a>
+                <a href="{% url 'account_login' %}">
+                    <button type="button" class="btn btn-signup btn-sm">Login</button>
+                </a>
 
-                <a href="{% url 'account_signup' %}" class="btn btn-signup btn-sm ms-2 btn btn-danger">Register</a>
-
+                <a href="{% url 'account_signup' %}">
+                    <button type="button" class="btn btn-signup btn-sm ms-2">Register</button>
+                </a>
                 {% endif %}
             </div>
         </div>
-        {% if user.is_authenticated %}
-        <div class="col-md-4 card">
-            <div class="card-body">
-                {% if commented %}
-                <div class="alert alert-success" role="alert">
-                    Your comment is awaiting approval
-                </div>
-                {% else %}
-                <h3>Leave a comment:</h3>
-                <p>Posting as: <strong>{{ user.username }}</strong></p>
-                <form method="post">
-                    {{ comment_form | crispy }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-signup mt-2 btn btn-danger">Submit</button>
-                </form>
+                {% if user.is_authenticated %}
+                <div class="col-md-4 card">
+                    <div class="card-body">
+                        {% if commented %}
+                            <div class="alert alert-success" role="alert">
+                                Your comment is awaiting approval
+                            </div>
+                        {% else %}
+                            <h3>Leave a comment:</h3>
+                            <p>Posting as: <strong>{{ user.username }}</strong></p>
+                            <form method="post">
+                                {{ comment_form | crispy }}
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-signup mt-2">Submit</button>
+                            </form>
                 {% endif %}
                 {% endif %}
             </div>
         </div>
     </div>
-</div>
+</div>  
 {%endblock%}

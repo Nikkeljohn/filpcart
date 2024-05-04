@@ -484,8 +484,6 @@ Back to [top](#table-of-contents)
 
 ## Testing
 
-### CSS Code Validation
-![screenshot](/images/python/csscheck.png)
 
 ### Python Code Validation
 ![screenshot](/images/python/Screenshot%202024-05-02%20at%2012.36.21.png)
@@ -507,20 +505,20 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 <details>
 <summary><strong>base.html</strong> </summary>
 
-![base.html]()
+![base.html](/images/html/home.png)
 </details>
 
 <details>
 <summary> <strong>add-product.html</strong></summary>
 
-![add_product.html]()
+![add_product.html](/images/html/3.png)
 
 </details>
 
 <details>
 <summary> <strong>bag.html</strong></summary>
 
-![bag.html](/images/bag.png)
+![bag.html](/images/html/Screenshot%202024-05-03%20at%2020.03.59.png)
 
 </details>
 
@@ -529,49 +527,49 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 <details>
 <summary> <strong>checkout_success.html</strong></summary>
 
-![checkout_success.html]()
+![checkout_success.html](/images/html/3.png)
 
 </details>
 
 <details>
 <summary> <strong>checkout.html</strong></summary>
 
-![checkout.html]()
+![checkout.html](/images/html/3.png)
 
 </details>
 
 <details>
 <summary> <strong>edit_product.html</strong></summary>
 
-![edit_product.html]()
+![edit_product.html](/images/html/3.png)
 
 </details>
 
 <details>
 <summary> <strong>post_detail.html</strong></summary>
 
-![post-detail.html]()
+![post-detail.html](/images/html/3.png)
 
 </details>
 
 <details>
 <summary> <strong>products.html</strong></summary>
 
-![products.html]()
+![products.html](/images/html/3.png)
 
 </details>
 
 <details>
-<summary> <strong>product-detail.html</strong></summary>
+<summary> <strong>blog.html</strong></summary>
 
-![product-detail.html]()
+![blog.html](/images/html/3.png)
 
 </details>
 
 <details>
 <summary> <strong>profile.html</strong></summary>
 
-![profile.html]()
+![profile.html](/images/html/3.png)
 
 </details>
 
@@ -579,19 +577,13 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 ### CSS Code Validation
 CSS file validation results generated with W3C Validation Service
 
-<details>
+
 <summary> <strong>base.css</strong></summary>
 
-![base-css]()
+![screenshot](/images/python/csscheck.png)
 
-</details>
 
-<details>
-<summary> <strong>checkout.css</strong></summary>
 
-![checkout-css]()
-
-</details>
 
 ### Manual testing
 
