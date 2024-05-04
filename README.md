@@ -563,13 +563,16 @@ The W3C Markup Validation Service was used to validate the HTML of the website. 
 <summary> <strong>blog.html</strong></summary>
 
 ![blog.html](/images/html/3.png)
+![blog_detail.html](/images/html/)
 
 </details>
 
 <details>
 <summary> <strong>profile.html</strong></summary>
 
-![profile.html](/images/html/3.png)
+![profile.html](/images/blog2.png)
+Erorrs are 3rd party side 
+and 3 internal warrings like every html 
 
 </details>
 
